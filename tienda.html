@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+    Estructura general:
+    Página de Tienda de Groova.
+    Secciones: Header, Banner de tienda, Filtros,
+    Grid de productos y Footer.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explora toda la colección de vinilos de Groova. Filtra por género y encuentra tu próximo disco favorito.">
+    <meta name="keywords" content="vinilos, discos, tienda, comprar vinilos">
+    <meta name="author" content="Groova">
+
+    <title>Tienda — Groova</title>
+
+    <!-- Preconnect para Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/index.css">
+    <script defer src="js/index.js"></script>
+</head>
+
+<body>
+
+    <!-- Header: navegacion principal -->
+    <header class="header">
+        <a class="header__logo" href="index.html" title="Groova - Inicio" aria-label="Groova">Groova</a>
+
+        <nav class="header__nav">
+            <ol>
+                <li class="header__link">
+                    <a href="tienda.html" title="Ver tienda">Tienda</a>
+                </li>
+                <li class="header__link">
+                    <a href="cuidados.html" title="Cómo cuidar tus vinilos">Cuidados</a>
+                </li>
+                <li class="header__link">
+                    <a href="nuestra-historia.html" title="Conoce nuestra historia">Nuestra Historia</a>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="header__actions">
+            <button class="header__cart" title="Ver carrito" aria-label="Carrito de compras">
+                <span class="material-symbols-outlined">shopping_cart</span>
+                <span class="header__cart-count header__cart-count--hidden">0</span>
+            </button>
+            <button class="header__user" title="Mi cuenta" aria-label="Mi cuenta">
+                <span class="material-symbols-outlined">person</span>
+            </button>
+        </div>
+
+        <button class="header__menu" title="Abrir menú" aria-label="Menú de navegación">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </header>
+    <!-- / Header -->
+
+    <main>
+
+        <!-- Banner de tienda - titulo y descripción -->
+        <section class="store-banner section">
+            <span class="store-banner__label">Colección Completa</span>
+            <h1 class="store-banner__title">Todos los Discos</h1>
+            <p class="store-banner__desc">Explora nuestra selección curada. Cada vinilo ha sido elegido a mano para
+                oídos exigentes.</p>
+        </section>
+        <!-- / Banner de tienda -->
+
+        <!-- Filtros: botones para filtrar por género -->
+        <div class="filters section">
+            <button class="filters__btn filters__btn--active" title="Ver todos los géneros"
+                data-filter="todos">Todos</button>
+            <button class="filters__btn" title="Filtrar por Rock" data-filter="rock">Rock</button>
+            <button class="filters__btn" title="Filtrar por Pop" data-filter="pop">Pop</button>
+            <button class="filters__btn" title="Filtrar por Reggaetón" data-filter="reggaeton">Reggaetón</button>
+            <button class="filters__btn" title="Filtrar por Alternativo" data-filter="alternativo">Alternativo</button>
+            <button class="filters__btn" title="Filtrar por Pop Latino" data-filter="pop-latino">Pop Latino</button>
+        </div>
+        <!-- / Filtros -->
+
+        <!-- Grid de productos: Todos los vinilos disponibles -->
+        <div class="store-grid section">
+
+            <!-- Producto: Abbey Road -->
+            <article class="product" data-genre="rock">
+                <div class="product__media">
+                    <picture class="product__front">
+                        <source srcset="media/abbey-road.webp" type="image/webp">
+                        <img src="media/abbey-road.jpg" loading="lazy"
+                            alt="Portada del disco Abbey Road de The Beatles">
+                    </picture>
+                    <picture class="product__back">
+                        <source srcset="media/abbey-road-disco.webp" type="image/webp">
+                        <img src="media/abbey-road-disco.jpg" loading="lazy"
+                            alt="Disco de vinilo Abbey Road de The Beatles">
+                    </picture>
+                </div>
+                <div class="product__info">
+                    <div class="product__details">
+                        <span class="product__category">Rock · 1969</span>
+                        <h2 class="product__name">
+                            <a href="#" title="Ver detalle de Abbey Road">Abbey Road</a>
+                        </h2>
+                        <span class="product__artist">The Beatles</span>
+                    </div>
+                    <span class="product__price">40,00 €</span>
+                </div>
+                <button class="product__cart" title="Añadir al carrito" aria-label="Añadir al carrito">
+                    <span class="material-symbols-outlined">add_shopping_cart</span>
+                    Añadir
+                </button>
+            </article>
+            <!-- / Producto -->
+
+            <!-- Producto Anthology -->
+            <article class="product" data-genre="rock">
+                <div class="product__media">
+                    <picture class="product__front">
+                        <source srcset="media/anthology.webp" type="image/webp">
+                        <img src="media/anthology.jpg" loading="lazy" alt="Anthology - The Beatles">
+                    </picture>
+                    <picture class="product__back">
+                        <source srcset="media/anthology-disco.webp" type="image/webp">
+                        <img src="media/anthology-disco.jpg" loading="lazy"
+                            alt="Vinilo Anthology de The Beatles">
+                    </picture>
+                </div>
+                <div class="product__info">
+                    <div class="product__details">
+                        <span class="product__category">Rock · 1995</span>
+                        <h2 class="product__name">
+                            <a href="#" title="Ver detalle de Anthology">Anthology</a>
+                        </h2>
+                        <span class="product__artist">The Beatles</span>
+                    </div>
+                    <span class="product__price">52,00 €</span>
+                </div>
+                <button class="product__cart" title="Añadir al carrito" aria-label="Añadir al carrito">
+                    <span class="material-symbols-outlined">add_shopping_cart</span>
+                    Añadir
+                </button>
+            </article>
+            <!-- /  Producto -->
+
+            <!-- Producto: debi tirar mas fotos  -->
+            <article class="product" data-genre="reggaeton">
+                <div class="product__media">
+                    <picture class="product__front">
+                        <source srcset="media/bad-bunny.webp" type="image/webp">
+                        <img src="media/bad-bunny.jpg" loading="lazy"
+                            alt="Portada del disco DeBÍ TiRAR MáS FOToS">
+                    </picture>
+                    <picture class="product__back">
+                        <source srcset="media/bad-bunny-disco.webp" type="image/webp">
+                        <img src="media/bad-bunny-disco.jpg" loading="lazy"
+                            alt="Vinilo DeBÍ TiRAR MáS FOToS">
+                    </picture>
+                </div>
+                <div class="product__info">
+                    <div class="product__details">
+                        <span class="product__category">Reggaetón · 2024</span>
+                        <h2 class="product__name">
+                            <a href="#" title="Ver detalle de DeBÍ TiRAR MáS FOToS">DeBÍ TiRAR MáS FOToS</a>
+                        </h2>
+                        <span class="product__artist">Bad Bunny</span>
+                    </div>
+                    <span class="product__price">45,00 €</span>
+                </div>
+                <button class="product__cart" title="Añadir al carrito"
+                    aria-label="Añadir al carrito">
+                    <span class="material-symbols-outlined">add_shopping_cart</span>
+                    Añadir
+                </button>
+            </article>
+            <!-- / Producto -->
+
+            <!-- Producto: bailemos otra vez -->
+            <article class="product" data-genre="pop-latino">
+                <div class="product__media">
+                    <picture class="product__front">
+                        <source srcset="media/chayanne.webp" type="image/webp">
+                        <img src="media/chayanne.jpg" loading="lazy"
+                            alt="Portada de Bailemos Otra Vez de Chayanne">
+                    </picture>
+                    <picture class="product__back">
+                        <source srcset="media/chayanne-disco.webp" type="image/webp">
+                        <img src="media/chayanne-disco.jpg" loading="lazy"
+                            alt="Vinilo Bailemos Otra Vez de Chayanne">
+                    </picture>
+                </div>
+                <div class="product__info">
+                    <div class="product__details">
+                        <span class="product__category">Pop Latino · 2024</span>
+                        <h2 class="product__name">
+                            <a href="#" title="Ver detalle de Bailemos Otra Vez">Bailemos Otra Vez</a>
+                        </h2>
+                        <span class="product__artist">Chayanne</span>
+                    </div>
+                    <span class="product__price">38,00 €</span>
+                </div>
+                <button class="product__cart" title="Añadir al carrito" aria-label="Añadir al carrito">
+                    <span class="material-symbols-outlined">add_shopping_cart</span>
+                    Añadir
+                </button>
+            </article>
+            <!-- / Producto -->
+
+            <!-- Producto: parachutes -->
+            <article class="product" data-genre="alternativo">
+                <div class="product__media">
+                    <picture class="product__front">
+                        <source srcset="media/coldplay-parachutes.webp" type="image/webp">
+                        <img src="media/coldplay-parachutes.jpg" loading="lazy"
+                            alt="Portada de Parachutes de Coldplay">
+                    </picture>
+                    <picture class="product__back">
+                        <source srcset="media/coldplay-parachutes-disco.webp" type="image/webp">
+                        <img src="media/coldplay-parachutes-disco.jpg" loading="lazy"
+                            alt="Disco de vinilo Parachutes de Coldplay">
+                    </picture>
+                </div>
+                <div class="product__info">
+                    <div class="product__details">
+                        <span class="product__category">Alternativo · 2000</span>
+                        <h2 class="product__name">
+                            <a href="#" title="Ver detalle de Parachutes">Parachutes</a>
+                        </h2>
+                        <span class="product__artist">Coldplay</span>
+                    </div>
+                    <span class="product__price">36,00 €</span>
+                </div>
+                <button class="product__cart" title="Añadir al carrito" aria-label="Añadir al carrito">
+                    <span class="material-symbols-outlined">add_shopping_cart</span>
+                    Añadir
+                </button>
+            </article>
+            <!-- / Producto -->
+
+            <!-- dinner party -->
+            <article class="product" data-genre="pop">
+                <div class="product__media">
+                    <picture class="product__front">
+                        <source srcset="media/dinner-party.webp" type="image/webp">
+                        <img src="media/dinner-party.jpg" loading="lazy"
+                            alt="Portada del disco Dinner Party">
+                    </picture>
+                    <picture class="product__back">
+                        <source srcset="media/dinner-party-disco.webp" type="image/webp">
+                        <img src="media/dinner-party-disco.jpg" loading="lazy"
+                            alt="Disco de vinilo Dinner Party de Niall Horan">
+                    </picture>
+                </div>
+                <div class="product__info">
+                    <div class="product__details">
+                        <span class="product__category">Pop · 2024</span>
+                        <h2 class="product__name">
+                            <a href="#" title="Ver detalle de Dinner Party">Dinner Party</a>
+                        </h2>
+                        <span class="product__artist">Niall Horan</span>
+                    </div>
+                    <span class="product__price">34,00 €</span>
+                </div>
+                <button class="product__cart" title="Añadir al carrito" aria-label="Añadir al carrito">
+                    <span class="material-symbols-outlined">add_shopping_cart</span>
+                    Añadir
+                </button>
+            </article>
+            <!-- / Producto -->
+
+            <!-- Producto Harry's House -->
+            <article class="product" data-genre="pop">
+                <div class="product__media">
+                    <picture class="product__front">
+                        <source srcset="media/harrys-house.webp" type="image/webp">
+                        <img src="media/harrys-house.jpg" loading="lazy"
+                            alt="Portada del vinilo Harry's House de Harry Styles">
+                    </picture>
+                    <picture class="product__back">
+                        <source srcset="media/harrys-house-disco.webp" type="image/webp">
+                        <img src="media/harrys-house-disco.jpg" loading="lazy"
+                            alt="Disco de vinilo Harry's House de Harry Styles">
+                    </picture>
+                </div>
+                <div class="product__info">
+                    <div class="product__details">
+                        <span class="product__category">Pop · 2022</span>
+                        <h2 class="product__name">
+                            <a href="#" title="Ver detalle de Harry's House">Harry's House</a>
+                        </h2>
+                        <span class="product__artist">Harry Styles</span>
+                    </div>
+                    <span class="product__price">42,00 €</span>
+                </div>
+                <button class="product__cart" title="Añadir al carrito" aria-label="Añadir al carrito">
+                    <span class="material-symbols-outlined">add_shopping_cart</span>
+                    Añadir
+                </button>
+            </article>
+            <!-- / Producto -->
+
+            <!-- Producto: Sabrina Carpenter -->
+            <article class="product" data-genre="pop">
+                <div class="product__media">
+                    <picture class="product__front">
+                        <source srcset="media/mans-best-friend.webp" type="image/webp">
+                        <img src="media/mans-best-friend.jpg" loading="lazy"
+                            alt="Portada del vinilo Man's Best Friend de Sabrina Carpenter">
+                    </picture>
+                    <picture class="product__back">
+                        <source srcset="media/mans-best-friend-disco.webp" type="image/webp">
+                        <img src="media/mans-best-friend-disco.jpg" loading="lazy"
+                            alt="Disco de vinilo Man's Best Friend de Sabrina Carpenter">
+                    </picture>
+                </div>
+                <div class="product__info">
+                    <div class="product__details">
+                        <span class="product__category">Pop · 2024</span>
+                        <h2 class="product__name">
+                            <a href="#" title="Ver detalle de Man's Best Friend">Man's Best Friend</a>
+                        </h2>
+                        <span class="product__artist">Sabrina Carpenter</span>
+                    </div>
+                    <span class="product__price">39,00 €</span>
+                </div>
+                <button class="product__cart" title="Añadir al carrito"
+                    aria-label="Añadir al carrito">
+                    <span class="material-symbols-outlined">add_shopping_cart</span>
+                    Añadir
+                </button>
+            </article>
+            <!-- / Producto -->
+
+            <!-- Producto: Bravo -->
+            <article class="product" data-genre="rock">
+                <div class="product__media">
+                    <picture class="product__front">
+                        <source srcset="media/sexy-zebras.webp" type="image/webp">
+                        <img src="media/sexy-zebras.jpg" loading="lazy" alt="Portada del disco Bravo de Sexy Zebras">
+                    </picture>
+                    <picture class="product__back">
+                        <source srcset="media/sexy-zebras-disco.webp" type="image/webp">
+                        <img src="media/sexy-zebras-disco.jpg" loading="lazy"
+                            alt="Disco de vinilo Bravo de Sexy Zebras">
+                    </picture>
+                </div>
+                <div class="product__info">
+                    <div class="product__details">
+                        <span class="product__category">Rock · 2016</span>
+                        <h2 class="product__name">
+                            <a href="#" title="Ver detalle de Bravo">Bravo</a>
+                        </h2>
+                        <span class="product__artist">Sexy Zebras</span>
+                    </div>
+                    <span class="product__price">32,00 €</span>
+                </div>
+                <button class="product__cart" title="Añadir al carrito" aria-label="Añadir al carrito">
+                    <span class="material-symbols-outlined">add_shopping_cart</span>
+                    Añadir
+                </button>
+            </article>
+            <!-- / Producto -->
+
+            <!-- Producto: The romantic -->
+            <article class="product" data-genre="pop">
+                <div class="product__media">
+                    <picture class="product__front">
+                        <source srcset="media/the-romantic.webp" type="image/webp">
+                        <img src="media/the-romantic.jpg" loading="lazy"
+                            alt="Portada del disco The Romantic de Bruno Mars">
+                    </picture>
+                    <picture class="product__back">
+                        <source srcset="media/the-romantic-disco.webp" type="image/webp">
+                        <img src="media/the-romantic-disco.jpg" loading="lazy"
+                            alt="Disco de vinilo The Romantic de Bruno Mars">
+                    </picture>
+                </div>
+                <div class="product__info">
+                    <div class="product__details">
+                        <span class="product__category">Pop · 2025</span>
+                        <h2 class="product__name">
+                            <a href="#" title="Ver detalle de The Romantic">The Romantic</a>
+                        </h2>
+                        <span class="product__artist">Bruno Mars</span>
+                    </div>
+                    <span class="product__price">44,00 €</span>
+                </div>
+                <button class="product__cart" title="Añadir al carrito" aria-label="Añadir al carrito">
+                    <span class="material-symbols-outlined">add_shopping_cart</span>
+                    Añadir
+                </button>
+            </article>
+            <!-- / Producto -->
+
+        </div>
+        <!-- / Grid de productos -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__col">
+                <a class="footer__logo" href="index.html" title="Groova - Inicio">Groova</a>
+                <p class="footer__desc">Un refugio para el oyente intencional. Curado en Barcelona, enviado a todo el
+                    mundo.</p>
+                <div class="footer__social">
+                    <a href="https://instagram.com" target="_blank" rel="noreferrer" title="Groova en Instagram"
+                        aria-label="Instagram">
+                        <span class="material-symbols-outlined">photo_camera</span>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noreferrer" title="Groova en Twitter"
+                        aria-label="Twitter">
+                        <span class="material-symbols-outlined">alternate_email</span>
+                    </a>
+                    <a href="https://spotify.com" target="_blank" rel="noreferrer" title="Groova en Spotify"
+                        aria-label="Spotify">
+                        <span class="material-symbols-outlined">headphones</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__heading">Tienda</h3>
+                <ol class="footer__links">
+                    <li><a href="#" title="Ver todos los vinilos">Todos los Discos</a></li>
+                    <li><a href="#" title="Ver tocadiscos">Giradiscos</a></li>
+                    <li><a href="#" title="Ver accesorios">Accesorios</a></li>
+                    <li><a href="#" title="Comprar tarjeta regalo">Tarjetas Regalo</a></li>
+                </ol>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__heading">Soporte</h3>
+                <ol class="footer__links">
+                    <li><a href="#" title="Información de envíos">Envíos</a></li>
+                    <li><a href="#" title="Política de devoluciones">Devoluciones</a></li>
+                    <li><a href="#" title="Ver precios">Precios</a></li>
+                    <li><a href="#" title="Formulario de contacto">Contacto</a></li>
+                </ol>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__heading">Ubicación</h3>
+                <address class="footer__address">
+                    <p>Carrer de Petritxol</p>
+                    <p>08002 Barcelona, España</p>
+                    <p>Lun — Sáb: 11:00 — 20:00</p>
+                </address>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2026 Groova Analogue Emporium. Todos los derechos reservados.</p>
+            <ol class="footer__legal">
+                <li><a href="#" title="Página de inicio">Inicio</a></li>
+                <li><a href="#" title="Política de privacidad">Política de Privacidad</a></li>
+                <li><a href="#" title="Política de cookies">Cookies</a></li>
+            </ol>
+        </div>
+    </footer>
+    <!-- / Footer -->
+
+</body>
+
+</html>

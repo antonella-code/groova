@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+    Estructura general:
+    Página Nuestra Historia de Groova.
+    Secciones: Header, Intro, Historia con imagen
+    y Footer.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce la historia detrás de Groova. Una tienda de vinilos nacida del amor por la música y la estética vintage.">
+    <meta name="keywords" content="Groova, historia, vinilos, tienda, vintage">
+    <meta name="author" content="Groova">
+
+    <title>Nuestra Historia — Groova</title>
+
+    <!-- Preconnect para Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/index.css">
+    <script defer src="js/index.js"></script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <a class="header__logo" href="index.html" title="Groova - Inicio" aria-label="Groova">Groova</a>
+
+        <nav class="header__nav">
+            <ol>
+                <li class="header__link">
+                    <a href="tienda.html" title="Ver tienda">Tienda</a>
+                </li>
+                <li class="header__link">
+                    <a href="cuidados.html" title="Cómo cuidar tus vinilos">Cuidados</a>
+                </li>
+                <li class="header__link">
+                    <a href="nuestra-historia.html" title="Conoce nuestra historia">Nuestra Historia</a>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="header__actions">
+            <button class="header__cart" title="Ver carrito" aria-label="Carrito de compras">
+                <span class="material-symbols-outlined">shopping_cart</span>
+                <span class="header__cart-count header__cart-count--hidden">0</span>
+            </button>
+            <button class="header__user" title="Mi cuenta" aria-label="Mi cuenta">
+                <span class="material-symbols-outlined">person</span>
+            </button>
+        </div>
+
+        <button class="header__menu" title="Abrir menú" aria-label="Menú de navegación">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </header>
+    <!-- / header -->
+
+    <main>
+
+        <!-- intro -->
+        <section class="story-intro section">
+            <span class="store-banner__label">Nuestra Historia</span>
+            <h1 class="store-banner__title">Todo empezó con un disco en una estantería</h1>
+        </section>
+
+        <!-- historia: Imagen y texto -->
+        <section class="story section">
+            <div class="story__image">
+                <picture>
+                    <source srcset="media/historia-fundadora.webp" type="image/webp">
+                    <img src="media/historia-fundadora.jpg" loading="lazy" alt="Fundadora de Groova">
+                </picture>
+            </div>
+
+            <div class="story__text">
+                <h2 class="story__name">Antonella</h2>
+                <span class="story__role">Fundadora de Groova</span>
+
+                <p class="story__paragraph">Un día entré a casa de una amiga y vi un vinilo apoyado en su estantería, al lado de unas plantas y unas velas. Ni siquiera estaba sonando. Pero la habitación entera tenía otra energía. Ese disco cambiaba todo.</p>
+
+                <p class="story__paragraph">Desde ese momento me obsesioné. Empecé a coleccionar vinilos no solo por la música, sino por lo que hacían en un espacio. Un disco en una mesa, en una estantería, al lado del giradiscos, le da a cualquier rincón un toque que nada más puede dar. Es vintage, es cálido, es real.</p>
+
+                <p class="story__paragraph">Groova nació de una idea muy simple: quiero que todo el mundo pueda tener ese toque en su casa. No hace falta ser audiófilo ni experto. Solo hace falta querer algo bonito que además suena increíble.</p>
+
+                <p class="story__paragraph">Cada disco que ves aquí lo he elegido yo. Algunos porque suenan de maravilla, otros porque la portada es una obra de arte, y muchos porque las dos cosas. Al final, un vinilo es decoración que puedes poner a sonar cuando quieras.</p>
+
+                <p class="story__highlight">Eso es Groova: música que se ve tan bien como suena.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__col">
+                <a class="footer__logo" href="index.html" title="Groova - Inicio">Groova</a>
+                <p class="footer__desc">Un refugio para el oyente intencional.</p>
+                <div class="footer__social">
+                    <a href="https://instagram.com" target="_blank" rel="noreferrer" title="Groova en Instagram" aria-label="Instagram">
+                        <span class="material-symbols-outlined">photo_camera</span>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noreferrer" title="Groova en Twitter" aria-label="Twitter">
+                        <span class="material-symbols-outlined">alternate_email</span>
+                    </a>
+                    <a href="https://spotify.com" target="_blank" rel="noreferrer" title="Groova en Spotify" aria-label="Spotify">
+                        <span class="material-symbols-outlined">headphones</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__heading">Tienda</h3>
+                <ol class="footer__links">
+                    <li><a href="#" title="Ver todos los vinilos">Todos los Discos</a></li>
+                    <li><a href="#" title="Ver tocadiscos">Giradiscos</a></li>
+                    <li><a href="#" title="Ver accesorios">Accesorios</a></li>
+                    <li><a href="#" title="Comprar tarjeta regalo">Tarjetas Regalo</a></li>
+                </ol>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__heading">Soporte</h3>
+                <ol class="footer__links">
+                    <li><a href="#" title="Información de envíos">Envíos</a></li>
+                    <li><a href="#" title="Política de devoluciones">Devoluciones</a></li>
+                    <li><a href="#" title="Ver precios">Precios</a></li>
+                    <li><a href="#" title="Formulario de contacto">Contacto</a></li>
+                </ol>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__heading">Ubicación</h3>
+                <address class="footer__address">
+                    <p>Carrer de Petritxol</p>
+                    <p>08002 Barcelona, España</p>
+                    <p>Lun — Sáb: 11:00 — 20:00</p>
+                </address>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2026 Groova Analogue Emporium. Todos los derechos reservados.</p>
+            <ol class="footer__legal">
+                <li><a href="#" title="Página de inicio">Inicio</a></li>
+                <li><a href="#" title="Política de privacidad">Política de Privacidad</a></li>
+                <li><a href="#" title="Política de cookies">Cookies</a></li>
+            </ol>
+        </div>
+    </footer>
+    <!-- / Footer -->
+
+</body>
+
+</html>
