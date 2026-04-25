@@ -93,6 +93,7 @@ const handleAgregarCarrito = function () {
     contadorCarrito.classList.remove('header__cart-count--hidden');
 };
 
+
 /* ----------------------------------------
    Funciones: filtros
    ---------------------------------------- */

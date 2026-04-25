@@ -6,11 +6,8 @@
    Colecciones, Reseñas, Newsletter, Footer y Responsive.
    ======================================== */
 
-/* ----------------------------------------
-   Custom Properties: Colores, fuentes y tamaños
-   ---------------------------------------- */
+/* Custom Properties: Colores, fuentes y tamaños */
 :root {
-    /* Colores principales */
     --color-background: #ede9dd;
     --color-text: #3b2f2f;
     --color-text-light: #ffffff;
@@ -38,9 +35,7 @@
     --max-width: 75rem;
 }
 
-/* ----------------------------------------
-   Reset CSS: Normalización de estilos base
-   ---------------------------------------- */
+/* Reset CSS: Normalización de estilos base */
 * {
     margin: 0;
     padding: 0;
@@ -80,9 +75,7 @@ body {
     color: var(--color-text);
 }
 
-/* ----------------------------------------
-   Componentes reutilizables
-   ---------------------------------------- */
+/* Componentes reutilizables */
 
 /* Contenedor de sección con ancho máximo y padding */
 .section {
@@ -91,9 +84,7 @@ body {
     margin: 0 auto;
 }
 
-/* ----------------------------------------
-   Header: Logo, navegación y acciones
-   ---------------------------------------- */
+/* Header: Logo, navegación y acciones */
 .header {
     display: flex;
     justify-content: space-between;
@@ -170,9 +161,7 @@ body {
     background-color: var(--color-border);
 }
 
-/* ----------------------------------------
-   Hero: Banner principal con imagen y CTA
-   ---------------------------------------- */
+/* Hero: Banner principal con imagen y CTA */
 .hero {
     position: relative;
     width: 100%;
@@ -195,7 +184,6 @@ body {
     object-fit: cover;
 }
 
-/* Overlay oscuro sobre la imagen del hero usando pseudo-elemento */
 .hero::after {
     content: "";
     position: absolute;
@@ -244,9 +232,7 @@ body {
     background-color: var(--color-accent-hover);
 }
 
-/* ----------------------------------------
-   Selección Semanal: Título y enlace superior
-   ---------------------------------------- */
+/* Selección Semanal: Título y enlace superior */
 .selection__header {
     display: flex;
     justify-content: space-between;
@@ -280,9 +266,7 @@ body {
     border-bottom-color: var(--color-accent);
 }
 
-/* ----------------------------------------
-   Carrusel: Scroll horizontal de productos
-   ---------------------------------------- */
+/* Carrusel: Scroll horizontal de productos */
 .carousel {
     display: flex;
     gap: 1.5rem;
@@ -297,9 +281,6 @@ body {
     display: none;
 }
 
-/* ----------------------------------------
-   Producto: Tarjeta de vinilo individual
-   ---------------------------------------- */
 .product {
     min-width: clamp(12rem, 20vw, 16rem);
     max-width: clamp(12rem, 20vw, 16rem);
@@ -317,7 +298,6 @@ body {
     cursor: pointer;
 }
 
-/* Imagen frontal (portada) */
 .product__front {
     display: block;
     width: 100%;
@@ -331,7 +311,6 @@ body {
     object-fit: cover;
 }
 
-/* Imagen trasera (disco) - oculta por defecto */
 .product__back {
     position: absolute;
     inset: 0;
@@ -354,7 +333,6 @@ body {
     opacity: 0;
 }
 
-/* Información del producto debajo de la imagen */
 .product__info {
     display: flex;
     justify-content: space-between;
@@ -406,16 +384,13 @@ body {
 /* Botón de añadir al carrito */
 .product__cart {
     display: flex;
-    align-items: center;
     justify-content: center;
     gap: 0.4rem;
     width: 100%;
-    padding: 0.6rem;
     margin-top: auto;
-    font-size: 0.7rem;
-    color: var(--color-text);
-    background-color: transparent;
+    padding: 0.6rem;
     border: 2px solid var(--color-border);
+    font-size: 0.7rem;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
@@ -430,9 +405,6 @@ body {
     border-color: var(--color-brown);
 }
 
-/* ----------------------------------------
-   Colecciones: Dos cards lado a lado
-   ---------------------------------------- */
 .collections {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -474,7 +446,6 @@ body {
     background-color: var(--color-overlay-hover);
 }
 
-/* Contenido posicionado sobre la imagen */
 .collection__content {
     position: absolute;
     bottom: 1.5rem;
@@ -515,9 +486,6 @@ body {
     border-bottom-color: var(--color-text-light);
 }
 
-/* ----------------------------------------
-   Reseñas: Estrellas, cita y navegación
-   ---------------------------------------- */
 .reviews {
     text-align: center;
     padding-top: clamp(3rem, 6vw, 5rem);
@@ -532,7 +500,6 @@ body {
     color: var(--color-accent);
 }
 
-/* Relleno de las estrellas */
 .reviews__stars .material-symbols-outlined {
     font-variation-settings: 'FILL' 1;
     font-size: 1.25rem;
@@ -543,7 +510,6 @@ body {
     margin: 0 auto;
 }
 
-/* Por defecto todas las citas ocultas, la primera visible */
 .reviews__quote {
     display: none;
 }
@@ -571,7 +537,6 @@ body {
     color: rgba(59, 47, 47, 0.75);
 }
 
-/* Dots de navegación del slider */
 .reviews__dots {
     display: flex;
     justify-content: center;
@@ -597,9 +562,7 @@ body {
     background-color: var(--color-olive);
 }
 
-/* ----------------------------------------
-   Newsletter: Suscripción al boletín
-   ---------------------------------------- */
+/* Newsletter: Suscripción al boletín */
 .newsletter {
     background-color: var(--color-cream);
     border-radius: 4px;
@@ -677,9 +640,6 @@ body {
     background-color: var(--color-accent);
 }
 
-/* ----------------------------------------
-   Footer: Información, enlaces y legal
-   ---------------------------------------- */
 .footer {
     background-color: var(--color-footer);
     color: var(--color-text-light);
@@ -757,7 +717,6 @@ body {
     color: var(--color-text-light);
 }
 
-/* Dirección en el footer */
 .footer__address {
     font-style: normal;
     font-size: 0.85rem;
@@ -765,7 +724,6 @@ body {
     line-height: 1.8;
 }
 
-/* Línea inferior del footer con copyright y legal */
 .footer__bottom {
     display: flex;
     justify-content: space-between;
@@ -799,9 +757,7 @@ body {
 
 /* TIENDA Y CUIDADOS */
 
-/* ----------------------------------------
-   Banners de página: Título centrado
-   ---------------------------------------- */
+/* Banners de página: Título centrado */
 .store-banner,
 .care-intro {
     text-align: center;
@@ -846,9 +802,6 @@ body {
     line-height: 1.6;
 }
 
-/* ----------------------------------------
-   Filtros: Botones de género
-   ---------------------------------------- */
 .filters {
     display: flex;
     flex-wrap: wrap;
@@ -873,6 +826,7 @@ body {
 .filters__btn:active {
     border-color: var(--color-brown);
     color: var(--color-brown);
+    border-color: var(--color-brown);
 }
 
 /* Filtro activo */
@@ -882,9 +836,13 @@ body {
     border-color: var(--color-brown);
 }
 
-/* ----------------------------------------
-   Grid de productos: Layout de tarjetas
-   ---------------------------------------- */
+.filters__btn--active:hover,
+.filters__btn--active:active {
+    background-color: var(--color-brown);
+    color: var(--color-text-light);
+    border-color: var(--color-brown);
+}
+
 .store-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -892,15 +850,12 @@ body {
     padding-top: 0;
 }
 
-/* En la tienda los productos no tienen ancho fijo */
 .store-grid .product {
     min-width: auto;
     max-width: none;
 }
 
-/* ----------------------------------------
-   Cuidados: Grid Bento
-   ---------------------------------------- */
+/* Cuidados: Grid Bento */
 .bento {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -909,7 +864,6 @@ body {
     padding-top: 0;
 }
 
-/* Card base */
 .bento__card {
     display: flex;
     flex-direction: column;
@@ -980,7 +934,6 @@ body {
     line-height: 1.7;
 }
 
-/* Variantes de color */
 .bento__card--olive {
     background-color: var(--color-olive);
     color: var(--color-text-light);
@@ -1012,9 +965,7 @@ body {
     padding: 0.5rem;
 }
 
-/* ----------------------------------------
-   Nuestra historia intro y contenido
-   ---------------------------------------- */
+/* Nuestra historia intro y contenido */
 .story-intro {
     text-align: center;
     padding-top: clamp(3rem, 6vw, 5rem);
@@ -1076,9 +1027,7 @@ body {
     margin-top: 1rem;
 }
 
-/* ----------------------------------------
-   Responsive: Adaptación a tablet y móvil
-   ---------------------------------------- */
+/* Responsive: Adaptación a tablet y móvil */
 @media (max-width: 1024px) {
     .store-grid {
         grid-template-columns: repeat(3, 1fr);
