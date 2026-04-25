@@ -147,4 +147,15 @@ botonesFiltro.forEach(function (btn) {
     btn.addEventListener('click', handleFiltrar);
 });
 
+const botonMenu = document.querySelector('.header__menu');
+const navMenu = document.querySelector('.header__nav');
+
+if (botonMenu) {
+    const handleToggleMenu = function () {
+        navMenu.classList.toggle('header__nav--open');
+    };
+
+    botonMenu.addEventListener('click', handleToggleMenu);
+}
+
 })();
