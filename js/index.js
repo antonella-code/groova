@@ -28,6 +28,9 @@ const botonesCarrito = document.querySelectorAll('.product__cart');
 const botonesFiltro = document.querySelectorAll('.filters__btn');
 const productos = document.querySelectorAll('.store-grid .product');
 
+/* Prevenir envío del formulario newsletter */
+const formulario = document.querySelector('.newsletter__form');
+
 /* ----------------------------------------
    Variables
    ---------------------------------------- */
@@ -157,6 +160,12 @@ if (botonMenu) {
     };
 
     botonMenu.addEventListener('click', handleToggleMenu);
+}
+
+if (formulario) {
+    formulario.addEventListener('submit', function (e) {
+        e.preventDefault();
+    });
 }
 
 })();
